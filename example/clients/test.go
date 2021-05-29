@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/elliots/protoc-gen-twirp_swagger/example/clients/go"
+	"github.com/ndhaka007/protoc-gen-twirp_swagger/example/clients/go"
 )
 
 func main() {

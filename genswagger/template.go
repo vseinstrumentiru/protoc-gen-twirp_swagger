@@ -10,11 +10,11 @@ import (
 	"strings"
 	"sync"
 
-	swagger_options "github.com/elliots/protoc-gen-twirp_swagger/options"
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/proto"
 	pbdescriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
+	swagger_options "github.com/ndhaka007/protoc-gen-twirp_swagger/options"
 )
 
 var wktSchemas = map[string]schemaCore{

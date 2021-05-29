@@ -4,15 +4,14 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"strings"
 
-	"github.com/elliots/protoc-gen-twirp_swagger/genswagger"
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/proto"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
+	"github.com/ndhaka007/protoc-gen-twirp_swagger/genswagger"
 )
 
 var (
@@ -25,7 +24,7 @@ var (
 
 func parseReq(r io.Reader) (*plugin.CodeGeneratorRequest, error) {
 	glog.V(1).Info("Parsing code generator request")
-	input, err := ioutil.ReadAll(r)
+	input, err := io.ReadAll(r)
 	if err != nil {
 		glog.Errorf("Failed to read code generator request: %v", err)
 		return nil, err

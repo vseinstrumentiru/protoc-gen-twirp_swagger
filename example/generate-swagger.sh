@@ -1,6 +1,6 @@
 #!/bin/bash
 
-go get github.com/elliots/protoc-gen-twirp_swagger
+go get github.com/ndhaka007/protoc-gen-twirp_swagger
 
 protoc --go_out=. \
        --twirp_out=. \

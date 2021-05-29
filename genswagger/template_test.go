@@ -7,13 +7,13 @@ import (
 	"reflect"
 	"testing"
 
-	swagger_options "github.com/elliots/protoc-gen-twirp_swagger/options"
 	"github.com/golang/protobuf/proto"
 	protodescriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/golang/protobuf/ptypes/any"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/httprule"
+	swagger_options "github.com/ndhaka007/protoc-gen-twirp_swagger/options"
 )
 
 func crossLinkFixture(f *descriptor.File) *descriptor.File {

@@ -10,12 +10,12 @@
 package swagger
 
 import (
-	"io/ioutil"
-	"net/url"
-	"net/http"
-	"strings"
-	"golang.org/x/net/context"
 	"encoding/json"
+	"golang.org/x/net/context"
+	"io"
+	"net/http"
+	"net/url"
+	"strings"
 )
 
 // Linger please
@@ -79,7 +79,7 @@ func (a *HaberdasherApiService) MakeHat(ctx context.Context, body ExampleSize) (
 	}
 	defer localVarHttpResponse.Body.Close()
 	if localVarHttpResponse.StatusCode >= 300 {
-		bodyBytes, _ := ioutil.ReadAll(localVarHttpResponse.Body)
+		bodyBytes, _ := io.ReadAll(localVarHttpResponse.Body)
 		return successPayload, localVarHttpResponse, reportError("Status: %v, Body: %s", localVarHttpResponse.Status, bodyBytes)
 	}
 

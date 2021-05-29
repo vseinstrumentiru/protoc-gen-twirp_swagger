@@ -8,7 +8,6 @@ import (
 	"path/filepath"
 	"strings"
 
-	swagger_options "github.com/elliots/protoc-gen-twirp_swagger/options"
 	"github.com/golang/glog"
 	pbdescriptor "github.com/golang/protobuf/descriptor"
 	"github.com/golang/protobuf/proto"
@@ -16,6 +15,7 @@ import (
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 	gen "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/generator"
+	swagger_options "github.com/ndhaka007/protoc-gen-twirp_swagger/options"
 )
 
 var (
