@@ -35,7 +35,7 @@ This swagger file can then be used to generate documentation and clients for man
 
 ## Usage
 
-`go get github.com/ndhaka007/protoc-gen-twirp_swagger`
+`go get github.com/vseinstrumentiru/protoc-gen-twirp_swagger`
 
 then run as part of your usual protoc generation phase
 
@@ -216,7 +216,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ndhaka007/protoc-gen-twirp_swagger/example/clients/go"
+	"github.com/vseinstrumentiru/protoc-gen-twirp_swagger/example/clients/go"
 )
 
 func main() {

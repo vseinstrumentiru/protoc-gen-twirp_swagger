@@ -14,7 +14,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	pbdescriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
-	swagger_options "github.com/ndhaka007/protoc-gen-twirp_swagger/options"
+	swagger_options "github.com/vseinstrumentiru/protoc-gen-twirp_swagger/options"
 )
 
 var wktSchemas = map[string]schemaCore{
