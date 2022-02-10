@@ -82,6 +82,11 @@ func main() {
 		if err != nil {
 			glog.Fatal(err)
 		}
+
+		if len(f.Services) == 0 {
+			continue
+		}
+
 		targets = append(targets, f)
 	}
 

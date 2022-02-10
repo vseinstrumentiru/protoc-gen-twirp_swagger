@@ -670,9 +670,9 @@ func renderServices(pkg string, services []*descriptor.Service, paths swaggerPat
 			methodName := strings.Title(meth.GetName())
 			var path string
 			if pkg == "" {
-				path = fmt.Sprintf("/twirp/%s/%s", *svc.Name, methodName)
+				path = fmt.Sprintf("/%s/%s", *svc.Name, methodName)
 			} else {
-				path = fmt.Sprintf("/twirp/%s.%s/%s", pkg, *svc.Name, methodName)
+				path = fmt.Sprintf("/%s.%s/%s", pkg, *svc.Name, methodName)
 			}
 			// Iterate over all the swagger parameters
 			parameters := swaggerParametersObject{}
