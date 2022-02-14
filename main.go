@@ -14,12 +14,17 @@ import (
 	"github.com/vseinstrumentiru/protoc-gen-twirp_swagger/genswagger"
 )
 
+const (
+	version = "v0.0.3"
+)
+
 var (
 	importPrefix    = flag.String("import_prefix", "", "prefix to be added to go package paths for imported proto files")
 	file            = flag.String("file", "stdin", "where to load data from")
 	allowDeleteBody = flag.Bool("allow_delete_body", false, "unless set, HTTP DELETE methods may not have a body")
 	allowMerge      = flag.Bool("allow_merge", false, "if set, generation one swagger file out of multiple protos")
 	mergeFileName   = flag.String("merge_file_name", "apidocs", "target swagger file name prefix after merge")
+	versionFlag     = flag.Bool("version", false, "print version and exit")
 )
 
 func parseReq(r io.Reader) (*plugin.CodeGeneratorRequest, error) {
@@ -41,6 +46,12 @@ func parseReq(r io.Reader) (*plugin.CodeGeneratorRequest, error) {
 func main() {
 	flag.Parse()
 	defer glog.Flush()
+
+	if *versionFlag {
+		fmt.Println(version)
+
+		return
+	}
 
 	reg := descriptor.NewRegistry()
 
